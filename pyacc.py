@@ -42,12 +42,12 @@ parser = yacc.yacc()
 
 while True:
    try:
-       s = input('calc > ')
-       aVal = int(input('a > '))
-       bVal = int(input('b > '))
-       cVal = int(input('c > '))
+       s = input('Calc > ')
+       aVal = int(input('   a > '))
+       bVal = int(input('   b > '))
+       cVal = int(input('   c > '))
    except EOFError:
        break
    if not s: continue
    result = parser.parse(s)
-   print(result)
+   print('Ans > ' + str(result))
